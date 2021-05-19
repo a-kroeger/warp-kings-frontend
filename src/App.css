@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  background: #000;
+}
+
+/* Navbar & Fade Styling */
+
+.navwrap {
+  position: fixed;
+  background: none;
+  z-index: 999;
+}
+
+.navbar {
+  background: black;
+  min-height: 10vh;
+  width: 100vw;
+}
+
+.navfade {
+  display: block;
+  height: 3vh;
+  background: linear-gradient(
+  to bottom,
+  black, transparent);
+  object-position: bottom;
+}
+
+.navbump {
+  height: 80px;
+}
+
+.mobile-nav-logo, #nav-toggle, .nav-toggle-label {
+  display: none;
+}
+
+
+/* Navbar Item Styling */
+
+.navitem {
+  color: white;
+  text-decoration: none;
+  font-family: 'Nanum Brush Script', 'Nanum Myeongjo', serif;
+  font-size: 40px;
+  }
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.items li {
+  padding: 20px;      
+  font-size: 1.3rem;
+}
+
+.items li:hover {
+  transform: rotate(-14deg);
+}
+
+/* Cover */
+.coverimg img {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 100px;
+}
+
+/* About */
+.about {
+  background: #000;
+  color: #fff;
+  padding: 10vw;
+  padding-bottom: 15vh;
+  padding-top: 35vh;
+  text-align: justify;
+  line-height: 2.6rem;
+  font-size: 1.3rem;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.about h2 {
+  font-family: 'Nanum Brush Script', 'Nanum Myeongjo', serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.about p {
+  line-height: 2.7;
+}
+
+/* Email Form */
+#mc_embed_signup {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #000;
+}
+
+.mc-field-group input {
+  font-family: 'Nanum Myeongjo', serif;
+  background-color: #000;
+  color: #fff;
+  width: 80%;
+  max-width: 600px;
+  border: solid 1px #fff;
+  line-height: 2.4;
+  font-size: 18px;
+  padding: 0 10px;
+  margin-bottom: 40px;
+}
+
+.mc-field-group p {
+  font-family: 'Nanum Brush Script', 'Nanum Myeongjo', serif;
+  font-size: 1.9rem;
+  position: relative;
+  margin: auto;
+  margin-bottom: -4px;
+  width: fit-content;
+  line-height: 0.4;
+  padding: 0 19px;
+  color: #fff;
+  background: #000;
+}
+
+.clear input {
+  color: #fff;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.2rem;
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  background: #000;
+
+}
+
+#mc-embedded-subscribe {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.clear input:hover, .clear input:focus {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#hInput {
+  position: absolute;
+  left: -5000px;
+}
+
+/* Socials */
+.social-icons {
+  display: flex;
+  text-align: center;
+  margin: 6.5% 18%;
+}
+
+.social-icons a {
+  min-width: 80px;
+  margin: auto;
+}
+
+.social-icons img {
+  width: 5vw;
+  min-width: 40px;
+  transition: opacity 250ms ease;
+}
+
+/* Songs */
+
+.content {
+  display: flex;
+  padding: 10% 3%;
+}
+
+.content-title {
+  color: #fff;
+  width: 22vw;
+  max-width: 420px;
+  padding: 10px;
+  font-size: 2rem;
+  font-family: 'Nanum Brush Script', 'Nanum Myeongjo', serif;
+}
+
+.content-info {
+  margin: auto;
+  background: #000;
+  display: inherit;
+  flex-direction: row;
+}
+
+.wrap {
+  max-height: 255px;
+  padding: 30px;
+}
+
+.music-icon {
+  display: none;
+}
+
+.music-button {
+  transition: opacity 250ms ease;
+}
+
+.music-button:hover, .social-icons img:hover {
+  opacity: .6;
+  transition: opacity 250ms ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrap {
+      display: inherit;
+      height: auto;
+      padding: 25px 10px;
+      width: 80vw;
+      justify-content: space-between;
+  }
+
+  .music-icon {
+      display: block;
+      justify-content: right;
+  }
+
+  .music-button {
+      display: none;
+  }
+
+  .content-info {
+      flex-direction: column;
+  }
+
+  .content-title {
+      width: 80%;
+  }
+
+  .about p {
+    line-height: 2;
+    text-align: left;
+    letter-spacing: 1.;
+}
+
+}
+@media only screen and (max-width: 520px) {
+  .nav-toggle:checked ~ nav {
+    display: inline-block;
+}
+
+.nav-toggle-label {
+    display: inline;
+    color: white;
+}
+
+.hamburger-bar {
+    display: flex;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    margin-top: 20vw;
+    width: 100%;
+}
+
+
+.mobile-nav-logo {
+    display: inline;
+}
+
+.moblogo img {
+    width: 70%;
+}
+
+#hamburger-icon img {
+    width: 100%;
+    min-width: 50px;
+    margin-top: 10px;
+}
+
+/* Mobile Nav Item Styling */
+
+.items {
+  position: relative;
+    flex-direction: column;
+    width: 100%;
+    top: -5px;
+}
+
+.items li:hover {
+    transform: rotate(0deg);
+}
+
+.navitems {
+    position: relative;
+}
+
+/* songs */
+.music-icon img {
+  width: 50px;
+  margin: 8px 0 8px 8px;
+}
+
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.footer p {
+  margin: 15px 0 0 3%;
+  font-size: .2rem;
+  background: #333;
+
+}
+.footer img {
+  height: 35px;
+  margin-right: 3%;
+  margin: 3px 3% 3px 0;
+  background: #333;
+}
