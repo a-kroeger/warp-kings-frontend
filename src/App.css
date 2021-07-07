@@ -153,7 +153,8 @@
 .social-icons {
   display: flex;
   text-align: center;
-  margin: 6.5% 18%;
+  margin: 6.5% auto;
+  max-width: 800px;
 }
 
 .social-icons a {
@@ -162,7 +163,7 @@
 }
 
 .social-icons img {
-  width: 5vw;
+  width: 20%;
   min-width: 40px;
   transition: opacity 250ms ease;
 }
@@ -172,6 +173,10 @@
 .content {
   display: flex;
   padding: 10% 3%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: initial;
+  background-position: center;
 }
 
 .content-title {
@@ -191,8 +196,13 @@
 }
 
 .wrap {
-  max-height: 255px;
-  padding: 30px;
+  padding: 20px;
+}
+
+iframe {
+  height: fit-container;
+  min-height: 270px;
+  margin-top: 20px;
 }
 
 .music-icon {
@@ -314,7 +324,7 @@ nav {
 }
 .footer p {
   margin: 15px 0 0 3%;
-  font-size: .2rem;
+  font-size: .6rem;
   background: #333;
 
 }

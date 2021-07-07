@@ -9,10 +9,9 @@ function Song(props) {
     const youtube = props.songs.Youtube
     const ytprf = 'https://www.youtube.com/embed/'
     const id = props.songs._id
-  
-    console.log(background);
+
     return (
-      <div className="content" style={{backgroundImage: `url(${background})`, backgroundPosition:'center', backgroundRepeat: 'no-repeat'}}>
+      <div className="content" style={{backgroundImage: `url(${background})`}}>
               <div className="content-info">
                   <div className="wrap">
                       <h3 className="content-title">{songName}</h3>
@@ -30,7 +29,7 @@ function Song(props) {
                           <img alt='Listen On Apple Music' src="https://warpkings.com/images/apple-icon.png"></img>
                       </a>
                       </div>
-                  <iframe title={'The Warp Kings music video for ' + songName} height="315" src={ytprf + youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                  <iframe title={'The Warp Kings music video for ' + songName} height="fit-container" min-height="315px" src={ytprf + youtube} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
           </div>
     )
