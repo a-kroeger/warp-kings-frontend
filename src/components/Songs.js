@@ -10,7 +10,7 @@ function Songs(props){
     } else {
         return (
             <div id="anchor-content-panel">
-                {songs.map(songs => (
+                {songs.slice(0).reverse().map(songs => (
                     <Song
                         songs={songs}
                         key={songs.id}
